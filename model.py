@@ -1,6 +1,6 @@
 import torch
-from torch import nn
 import common
+from torch import nn
 class vkmodel(nn.Module):
     def __init__(self):
         super(vkmodel, self).__init__()
