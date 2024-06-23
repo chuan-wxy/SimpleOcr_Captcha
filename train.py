@@ -25,14 +25,14 @@ if __name__ == '__main__':
 
     optimizer = torch.optim.Adam(vkmodel.parameters(), lr=0.001)  # 优化器
     total_step = 0
-
-    for epoch in range(2):  # 训练层数
+    # 控制训练层数
+    for epoch in range(2):
         print("外层训练次数：{}".format(epoch))
         for i, (images, labels) in enumerate(train_dataloader):
             # 如果支持gpu训练，将开启gpu训练模式
             if torch.cuda.is_available():
-                images=images.cuda()
-                labels=labels.cuda()
+                images = images.cuda()
+                labels = labels.cuda()
 
             vkmodel.train()
             outputs = vkmodel(images)
