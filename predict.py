@@ -1,8 +1,9 @@
+"""该模块为预测模块，其包含test_pred()--批量预测模块和pic_pred()--单次预测模块"""
+
 import torch
 import common
 import one_hot
 import my_datasets
-
 from PIL import Image
 from torchvision import transforms
 from torch.utils.data import DataLoader
@@ -55,4 +56,4 @@ def pic_pred(pic_path):
 
 if __name__ == '__main__':
     test_pred()
-    # pred_pic("./datasets/test/zxw5_1718882471.png")
+    pic_pred("./datasets/test/1vgt_1718887641.png")
